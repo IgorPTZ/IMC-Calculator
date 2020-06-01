@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport"
+        content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src * 'unsafe-inline' gap:; style-src 'self' 'unsafe-inline'; media-src *" />
+
+    <link rel="stylesheet" type="text/css" href="css/login.css" />
+    <link rel="stylesheet" type="text/css" href="css/splash.css" />
+    <title>Healthy</title>
+    <script type="text/javascript">
+        function startPage() {
+            setTimeout(() => {
+                document.getElementById('splash_screen').style.display = 'none'
+                document.getElementById('coluna_principal').style.display = 'flex'
+            }, 1200);
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            let area_texto = document.getElementById('resultado');
+            let resultado =  document.createElement('p');
+            area_texto.appendChild(resultado);
+        }, false);
+    </script>
+    
+    <script type="text/javascript" src="js/functions.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/start_cordova.js"></script>
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+    <div id="splash_screen" class="splash_screen">
+        <img class="logo_splash" src="./img/logo.svg" alt="">
+    </div>
+
+    <div id="coluna_principal" class="main_column fade-in">
+        <div class="marca"><img class="logo" src="./img/logo.svg" alt=""></div>
+        <div class="app_name">Healthy</div>
+        
+        <div style="margin-top: 70px;" class="input"><input id="peso" placeholder="Peso (Ex: 70,5)" type="text"class="healthy_input"></div>
+        <div class="input"><input id="altura" placeholder="Altura (Ex: 1,75)" type="text" class="healthy_input"></div>
+        
+        <div class="btn_login"><button class="healthy_button" onclick="calcularImc()">Calcular IMC</button></div>
+
+        <div style="margin-top: 70px;" id="mensagem_erro" class="input"></div>
+
+        <div style="margin-top: 70px;" id="resultado" class="input"></div>
+    </div>
+</body>
+
+</html>

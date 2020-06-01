@@ -1,0 +1,59 @@
+.nome_do_cara {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    margin-top: 25px;
+}
+
+.instant_card {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    background-color: #179FB4;
+    border-radius: 20px;
+    min-height: 200px;
+    overflow: hidden;
+}
+
+.card_header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% - 2px);
+    min-height: 50px;
+    border: 1px solid #179FB4;
+    background-color: #343A40;
+    margin-top: 1px;
+    border-radius: 20px;
+}
+
+.location_name {
+    color: white;
+    font-size: 18px;
+}
+
+.data_line {
+    display: inline-flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    min-height: 45px;
+}
+
+.data_block {
+    color: white;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    min-height: 45px;
+    text-align: center;
+}
+
+.icon_weather {
+    width: 90px;
+}
